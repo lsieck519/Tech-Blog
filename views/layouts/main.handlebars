@@ -5,30 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tech Blog</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-  <div class="">
-    <header class="">
+  <div class="section">
+    <header class="hero">
       <h1>
         <a href="/">Tech Blog</a>
       </h1>
-      <nav>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
 
         {{#if logged_in}}
-        <a href="/profile">profile</a> |
+        <a href="/dashboard">dashboard</a> |
         <button class="" id="logout">logout</button>
         {{else}}
         <a href="/login">login</a>
         {{/if}}
       </nav>
+
     </header>
-    <main class="">
+    <main class="container">
       {{{ body }}}
     </main>
 
-    <footer> Created by Laura Sieck</footer>
+    <footer class="title is-6"> Created by Laura Sieck</footer>
     
   </div>
 
