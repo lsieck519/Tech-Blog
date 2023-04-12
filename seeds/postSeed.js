@@ -7,18 +7,18 @@ const postData = [
     user_id: 1,
   },
   {
-    title: '',
-    body: '',
+    title: 'Post 2',
+    body: 'This is post 2',
     user_id: 1,
   },
   {
-    title: '',
-    body: '',
+    title: 'Post 3',
+    body: 'This is post 3',
     user_id: 1,
   },
   {
-    title: '',
-    body: '',
+    title: 'Post 4',
+    body: 'This is post 4',
     user_id: 1,
   },
 ];

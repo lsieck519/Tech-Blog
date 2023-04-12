@@ -7,27 +7,29 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Comment,
-          attributes: ['body', 'date_created'],
+          attributes: ['body', 'post_id', 'date_created', 'user_id'],
+          include: { model: User, attributes: ['email'] },
         },
         {
           model: User,
           attributes: ['email'],
-          order: ['created_at' , 'desc']
         },
       ],
     });
 
     const posts = postData.map((post) => post.get({ plain: true }));
-  
+
     res.render('homepage', {
       posts,
       logged_in: req.session.logged_in,
-      user: req.session.user
+      user: req.session.user,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+// login
 
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
@@ -37,8 +39,10 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
+// signup
+
 router.get('/signup', (req, res) => {
-  if (!req.session.logged_in) {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
   }

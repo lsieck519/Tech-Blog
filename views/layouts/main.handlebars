@@ -1,42 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tech Blog</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-  <link rel="stylesheet" href="/css/style.css">
-</head>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Tech Blog</title>
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css'
+    />
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
 
-<body>
-  <div class="section">
-    <header class="hero">
-      <h1>
-        <a href="/">Tech Blog</a>
-      </h1>
-      <nav class="navbar" role="navigation" aria-label="main navigation">
+  <body>
+    <div class='section'>
 
-        {{#if logged_in}}
-        <a href="/dashboard">dashboard</a> |
-        <button class="" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
-      </nav>
+      <header>
+        <nav class='navbar' role='navigation' aria-label='main navigation'>
+          <a href='/'>Tech Blog</a>
+          {{#if logged_in}}
+            <a href='/dashboard'>Dashboard</a>
+            <button
+              class='button is-ghost is-medium'
+              id='logout'
+            >Logout</button>
+          {{else}}
+            <a href='/login'>Login</a>
+            <a href='/signup'>Sign Up</a>
+          {{/if}}
+        </nav>
+      </header>
 
-    </header>
-    <main class="container">
-      {{{ body }}}
-    </main>
+      <main class='section'>{{{body}}}</main>
 
-    <footer class="title is-6"> Created by Laura Sieck</footer>
-    
-  </div>
+      
 
-  {{#if logged_in}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
+    </div>
+
+
+    {{#if logged_in}}
+      <script src='/js/logout.js'></script>
+    {{/if}}
+  </body>
+
+
 
 </html>

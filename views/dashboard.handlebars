@@ -1,13 +1,45 @@
 <div class="container">
+    <h2>Welcome!</h2>
 
-    <div class="">
-        <h2>Your Posts</h2>
-        <a href="/" class="button"></a>
-    </div>
+    <h3>Create a New Post:</h3>
 
+    <form class="form new-post-form">
+      <div class="form-group">
+        <label for="post-title">title:</label>
+        <input class="input" type="text" id="post-name" name="post-name" />
+      </div>
+      <div class="form-group">
+        <label for="post-body">body:</label>
+        <textarea class="input is-large" id="post-body" name="post-body"></textarea>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="button">Create</button>
+      </div>
+    </form>
+ 
+
+  {{#if posts.length}}
+  <div class="section">
+    <h3>
+      Your posts:
+    </h3>
     {{#each posts as |post|}}
-
-    {{>post dashboard="true"}}
-
+      <div class="section" >
+        <h2><a post-title-id={{id}} href='api/posts/{{id}}'>
+        {{title}}
+        </a></h2>  
+          <p>
+            {{post.body}}
+          </p>
+            <button id="delete-post" class="button is-danger" postid={{post.id}}>
+              DELETE
+            </button>   
+      </div>  
     {{/each}}
+  {{/if}}
+  </div> 
+
 </div>
+  
+
+<script src="/js/post.js"></script>
