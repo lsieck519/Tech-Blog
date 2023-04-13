@@ -15,10 +15,14 @@ body {
   top: 0px;
   width: 100%;
   padding: .5%;
+  vertical-align: middle;
+  color: darkblue;
 }
 
 #logout {
     font-family: monospace;
+    font-size: 1em;
+    color: black;
 }
 
 #date, #createdby {
@@ -31,10 +35,20 @@ body {
   border: 2px;
   border-color: rgb(226, 225, 225);
   border-style: solid;
-  margin: 1%;
+  margin: 2%;
 }
 
 
 #deletebutton, #createbutton, #loginbutton, #signupbutton {
   margin-top: 1%;
+  font-size: 12px;
 }
+
+#dashbody, #loginbody, #signupbody {
+  margin-top: 3%;
+}
+
+h2, a {
+  margin: auto;
+}
+
