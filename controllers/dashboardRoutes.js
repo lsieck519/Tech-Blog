@@ -32,20 +32,6 @@ router.get('/', withAuth, async (req, res) => {
   }
 });
 
-// update a post
-router.put('/:id', withAuth, async (req, res) => {
-  try {
-    const updatedPost = await Post.update({
-      ...req.body,
-      user_id: req.session.user_id,
-    });
-
-    res.status(200).json(updatedPost);
-  } catch (err) {
-    res.status(400).json('Unable to update post');
-  }
-});
-
 // create a post
 router.post('/', withAuth, async (req, res) => {
   try {
@@ -59,6 +45,21 @@ router.post('/', withAuth, async (req, res) => {
     res.status(400).json('Unable to create new post');
   }
 });
+
+// update a post -- to-do
+router.put('/:id', withAuth, async (req, res) => {
+  try {
+    const updatedPost = await Post.update({
+      ...req.body,
+      user_id: req.session.user_id,
+    });
+
+    res.status(200).json(updatedPost);
+  } catch (err) {
+    res.status(400).json('Unable to update post');
+  }
+});
+
 
 // delete a post
 router.delete('/:id', withAuth, async (req, res) => {

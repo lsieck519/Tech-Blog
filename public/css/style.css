@@ -11,15 +11,39 @@ body {
   justify-content: space-around;
   font-size: 1.1em;
   font-family: monospace;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  padding: 1%;
 }
 
 #logout {
     font-family: monospace;
 }
 
-#dashpostbody {
-    border: 10px;
-    border-color: black;
-    border-radius: 50%;
-    border-color: aquamarine;
+#date {
+  color:gray;
+  font-size: .75em;
+}
+
+#postsection {
+  padding: 1%;
+  border: 2px;
+  border-color: rgb(226, 225, 225);
+  border-style: solid;
+  margin: 1%;
+  padding-left: 0%;
+}
+
+#dashpost {
+  padding: 1%;
+  border: 2px;
+  border-color: rgb(226, 225, 225);
+  border-style: solid;
+  margin: 1%;
+  padding-left: 0%;
+}
+
+#deletebutton, #createbutton {
+  margin-top: 1%;
 }

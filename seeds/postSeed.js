@@ -9,17 +9,17 @@ const postData = [
   {
     title: 'Post 2',
     body: 'This is post 2',
-    user_id: 1,
+    user_id: 2,
   },
   {
     title: 'Post 3',
     body: 'This is post 3',
-    user_id: 1,
+    user_id: 3,
   },
   {
     title: 'Post 4',
     body: 'This is post 4',
-    user_id: 1,
+    user_id: 4,
   },
 ];
 

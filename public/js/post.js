@@ -28,11 +28,12 @@ document
   .querySelector('.new-post-form')
   .addEventListener('submit', newPostHandler);
 
-// delete post
+
+// delete post - this doesn't work
 const deletePostHandler = async (event) => {
   event.preventDefault();
 
-  const id = document.querySelector('postid');
+  const id = document.querySelector('post-id');
 
   const response = await fetch(`/dashboard/${id}`, {
     method: 'DELETE',
@@ -45,7 +46,7 @@ const deletePostHandler = async (event) => {
   } else {
     alert('Unable to delete post');
   }
-};
+}
 document
   .querySelector('#delete-post')
   .addEventListener('click', deletePostHandler);
