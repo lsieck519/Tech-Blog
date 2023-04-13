@@ -29,25 +29,26 @@ document
   .addEventListener('submit', newPostHandler);
 
 
-// delete post - this doesn't work
+// delete post 
 const deletePostHandler = async (event) => {
   event.preventDefault();
 
-  const id = document.querySelector('post-id');
+  if (event.target.hasAttribute('post-id')) {
+    const id = event.target.getAttribute('post-id');
 
-  const response = await fetch(`/dashboard/${id}`, {
-    method: 'DELETE',
-    body: JSON.stringify({ id }),
-    headers: { 'Content-Type': 'application/json' },
-  });
+    const response = await fetch(`/dashboard/${id}`, {
+      method: 'DELETE',
+    });
 
-  if (response.ok) {
-    document.location.replace('/dashboard');
-  } else {
-    alert('Oh no! This button does not work! ');
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert('Oh no! This button does not work! ');
+    }
   }
-}
+};
+
 document
-  .querySelector('#delete-post')
+  .getElementById('postlist')
   .addEventListener('click', deletePostHandler);
 

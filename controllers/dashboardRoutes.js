@@ -7,7 +7,7 @@ router.get('/', withAuth, async (req, res) => {
   try {
     const postData = await Post.findAll({
       where: { user_id: req.session.user_id },
-      attributes: ['title', 'body', 'date_created'],
+      attributes: ['title', 'body', 'id', 'date_created'],
       include: [
         {
           model: Comment,
@@ -67,7 +67,6 @@ router.delete('/:id', withAuth, async (req, res) => {
     const postData = await Post.destroy({
       where: {
         id: req.params.id,
-        user_id: req.session.user_id,
       },
     });
 

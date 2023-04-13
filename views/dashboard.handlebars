@@ -19,7 +19,7 @@
  
 
   {{#if posts.length}}
-  <div class="section">
+  <div class="section" id="postlist">
     <h3>
       Your posts:
     </h3>
@@ -37,14 +37,12 @@
             {{post.body}}
           </p>
 
-           <h3 id="date">{{post.date_created}}</h3>
+          <h3 id="date">{{post.date_created}}</h3>
 
           <div id="deletebutton">
-
-            <button class="button is-danger" post-id="{{post.id}}" id="delete-post">
+            <button class="button is-danger" post-id="{{post.id}}">
               Delete
             </button>   
-
           </div>
 
       </div>  
