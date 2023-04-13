@@ -21,28 +21,19 @@ body {
     font-family: monospace;
 }
 
-#date {
+#date, #createdby {
   color:gray;
   font-size: .75em;
 }
 
-#postsection {
+#postsection, #dashpost {
   padding: 1%;
   border: 2px;
   border-color: rgb(226, 225, 225);
   border-style: solid;
   margin: 1%;
-  padding-left: 0%;
 }
 
-#dashpost {
-  padding: 1%;
-  border: 2px;
-  border-color: rgb(226, 225, 225);
-  border-style: solid;
-  margin: 1%;
-  padding-left: 0%;
-}
 
 #deletebutton, #createbutton {
   margin-top: 1%;

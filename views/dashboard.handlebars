@@ -6,7 +6,7 @@
     <form class="form new-post-form">
       <div class="form-group">
         <label for="post-title">title:</label>
-        <input class="input" type="text" id="post-name" name="post-name" />
+        <input class="input is-medium" type="text" id="post-name" name="post-name" />
       </div>
       <div class="form-group">
         <label for="post-body">body:</label>
@@ -24,8 +24,9 @@
       Your posts:
     </h3>
 
-    <div id="dashpost">
+   
     {{#each posts as |post|}}
+     <div id="dashpost">
       <div class="section" >
         <h2><a post-title-id={{post.id}} href='api/posts/{{post.id}}'>
 
@@ -40,7 +41,7 @@
 
           <div id="deletebutton">
 
-            <button class="button is-danger" post-id={{post.id}} id="delete-post">
+            <button class="button is-danger" post-id="{{post.id}}" id="delete-post">
               Delete
             </button>   
 

@@ -44,11 +44,10 @@ const deletePostHandler = async (event) => {
   if (response.ok) {
     document.location.replace('/dashboard');
   } else {
-    alert('Unable to delete post');
+    alert('Oh no! This button does not work! ');
   }
 }
 document
   .querySelector('#delete-post')
   .addEventListener('click', deletePostHandler);
 
-// update post

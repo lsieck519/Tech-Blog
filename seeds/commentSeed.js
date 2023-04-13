@@ -1,3 +1,5 @@
+// comment functionality has not been built
+
 const { Comment } = require('../models');
 
 const commentData = [

@@ -1,1 +1,1 @@
-// to-do
+// comment functionality has not been built
