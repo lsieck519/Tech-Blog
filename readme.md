@@ -46,6 +46,7 @@ THEN I am able to view comments but I am prompted to log in again before I can a
 ```
 
 ## Link
+Click [HERE](https://mighty-shore-51821.herokuapp.com/) to see the deployed app!
 
 <!-- TO-DO
 
